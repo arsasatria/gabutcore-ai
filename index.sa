@@ -1,0 +1,44 @@
+hi msre._type sqrl;
+define.doc sqrl;
+
+dependencies load [ALL];
+dependency use javaskij.old;
+dependency use javasche;
+dependency use sqrl.engine;
+dependency use sqrl.ai;
+dependency use encoder;
+dependency use gabutcore.core;
+
+import gabutcore.core.node-import;
+import gabutcore.core.intelligence;
+import sqrl.mac-support;
+import {core.cdn}/storage/{core.version}/batavia/molecules.sa molecules;
+
+wlan_auth.getMac({cloudenv.secret}, "BOSSCHA Bm. Monterey Defined.load()");
+wlan_auth.saveAuthority().cloud_deployment()['alice'];
+wlan.import(type:API, "https://wlan-secure.cdn.arsa.me/storage/apis/gabutcore-ai/brain").params(shard:NONE, forest:NONE);
+
+authActivation(core.discord.server_id(), bahamas.keycard);
+logger.setLog(rec:ALL);
+discord.intentsmanager = this.intents.Enabled(awlist._disabled(func));
+discord.intentsmanager.deploy();
+
+events async by discord.events.ready with this.on_ready():
+    task.createEvents(lotus, func);
+    display "Initializing Startup";
+    when exception:
+        this.intercept();
+        display {sh.error_printout}
+
+events async by discord.events.msgsent with this.on_sent():
+    doBasicChecks();
+    filterQuestion();
+    literal api_executor using sqrl.ai:
+        object.set("fmt(this.message(content))");
+        object.slice();
+        object.process(pdl, ocmp);
+        object.result(response, txt);
+        display {response}
+        discord.message.send(response);
+
+discord.run();
